@@ -1,0 +1,33 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="302.811" height="302.811" viewBox="0 0 302.811 302.811" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Moon" filter="url(#filter0_dd_0_4)">
+<circle id="Ellipse 3" cx="151.406" cy="148.193" r="100" fill="#FFC998"/>
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M243.067 189.567C226.627 203.154 205.717 211.288 182.953 211.288C130.026 211.288 87.1196 167.316 87.1196 113.074C87.1196 94.4379 92.1842 77.0143 100.98 62.1697C71.6535 79.6008 52.0006 111.602 52.0006 148.193C52.0006 203.421 96.7721 248.193 152.001 248.193C192.473 248.193 227.33 224.15 243.067 189.567Z" fill="#826B55"/>
+<circle id="Ellipse 6" cx="132.358" cy="193.431" r="10.7143" fill="#826B55" stroke="#FFC998" stroke-width="2.38095"/>
+<circle id="Ellipse 7" cx="89.7986" cy="107.419" r="5.65476" fill="#826B55" stroke="#FFC998" stroke-width="2.38095"/>
+<circle id="Ellipse 8" cx="157.06" cy="63.3713" r="5.65476" fill="#826B55" stroke="#FFC998" stroke-width="2.38095"/>
+<circle id="Ellipse 9" cx="169.56" cy="112.181" r="11.0119" fill="#826B55" stroke="#FFC998" stroke-width="2.38095"/>
+<circle id="Ellipse 10" cx="215.989" cy="146.705" r="22.3214" fill="#826B55" stroke="#FFC998" stroke-width="2.38095"/>
+<circle id="Ellipse 11" cx="158.548" cy="152.359" r="12.5" fill="#826B55" stroke="#FFC998" stroke-width="2.38095"/>
+<circle id="Ellipse 12" cx="116.882" cy="89.2641" r="8.92857" fill="#826B55" stroke="#FFC998" stroke-width="2.38095"/>
+<circle id="Ellipse 13" cx="124.62" cy="125.574" r="4.76191" fill="#826B55" stroke="#FFC998" stroke-width="2.38095"/>
+</g>
+<defs>
+<filter id="filter0_dd_0_4" x="9.53674e-07" y="0" width="302.811" height="302.811" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="11.245"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.988235 0 0 0 0 0.623529 0 0 0 0 0.0784314 0 0 0 0.28 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_4"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="3.21285" operator="dilate" in="SourceAlpha" result="effect2_dropShadow_0_4"/>
+<feOffset dy="3.21285"/>
+<feGaussianBlur stdDeviation="24.0964"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.988235 0 0 0 0 0.623529 0 0 0 0 0.0784314 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_0_4" result="effect2_dropShadow_0_4"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_0_4" result="shape"/>
+</filter>
+</defs>
+</svg>

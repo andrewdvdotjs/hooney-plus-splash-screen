@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@font-face {
+  font-family: "Nunito:Regular";
+  src: url('https://static.figma.com/font/Nunito_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Nunito:SemiBold";
+  src: url('https://static.figma.com/font/Nunito_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Nunito:Bold";
+  src: url('https://static.figma.com/font/Nunito_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Nunito:Medium";
+  src: url('https://static.figma.com/font/Nunito_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0c0f;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Halloween splash motion study ------------------------------------------------ */
+.halloween-splash {
+  --duration: 1680ms;
+  align-items: center;
+  background: #0A0C0F;
+  cursor: pointer;
+  display: flex;
+  height: 100dvh;
+  isolation: isolate;
+  justify-content: center;
+  min-height: 480px;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.halloween-logo {
+  position: relative;
+  width: min(44vw, 190px);
+  /* It remains readable through the final-asset crossfade. */
+  z-index: 5;
+}
+
+.halloween-ghost,
+.halloween-final {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  will-change: transform, opacity;
+}
+
+.halloween-ghost {
+  height: min(55vw, 270px);
+  margin-left: calc(min(55vw, 270px) / -2);
+  margin-top: calc(min(55vw, 270px) / -2);
+  width: min(55vw, 270px);
+  z-index: 2;
+}
+
+.halloween-ghost--white { animation: halloween-white-path var(--duration) both cubic-bezier(.22,.8,.25,1); }
+.halloween-ghost--orange { animation: halloween-orange-path var(--duration) both cubic-bezier(.22,.8,.25,1); }
+
+.halloween-ghost-frames,
+.halloween-frame {
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.halloween-frame {
+  object-fit: contain;
+  opacity: 0;
+}
+
+.halloween-ghost-frames--white .halloween-frame--flying { animation: halloween-flying var(--duration) both; }
+.halloween-ghost-frames--orange .halloween-frame--flying { animation: halloween-flying var(--duration) both; }
+.halloween-ghost-frames--white .halloween-frame--front,
+.halloween-ghost-frames--orange .halloween-frame--front { animation: halloween-front var(--duration) both; }
+.halloween-ghost-frames--white .halloween-frame--closed,
+.halloween-ghost-frames--orange .halloween-frame--closed { animation: halloween-closed var(--duration) both; }
+
+.halloween-final {
+  height: min(81vw, 380px);
+  margin-left: calc(min(81vw, 380px) / -2);
+  margin-top: calc(min(81vw, 380px) / -2);
+  opacity: 0;
+  width: min(81vw, 380px);
+  z-index: 4;
+  animation: halloween-final-reveal var(--duration) both cubic-bezier(.2,.8,.2,1);
+}
+
+.halloween-final img { height: 100%; object-fit: contain; width: 100%; }
+
+.halloween-replay-hint {
+  bottom: max(24px, env(safe-area-inset-bottom));
+  color: rgba(238, 224, 213, .42);
+  font-size: 12px;
+  left: 50%;
+  letter-spacing: .04em;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+@keyframes halloween-white-path {
+  0%, 8% { opacity: 0; transform: translate3d(-52vw, -55vh, 0) rotate(-32deg) scale(.62); }
+  20% { opacity: 1; transform: translate3d(-27vw, -18vh, 0) rotate(12deg) scale(.94); }
+  36% { transform: translate3d(-19vw, -7vh, 0) rotate(-10deg) scale(.96); }
+  54% { transform: translate3d(-24vw, 7vh, 0) rotate(-2deg) scale(.93); }
+  68% { opacity: 1; transform: translate3d(-12vw, 4vh, 0) rotate(7deg) scale(.91); }
+  81% { opacity: 0; transform: translate3d(-5vw, -2vh, 0) rotate(0deg) scale(.9); }
+  100% { opacity: 0; transform: translate3d(-5vw, -2vh, 0) rotate(0deg) scale(.9); }
+}
+
+@keyframes halloween-orange-path {
+  0%, 25% { opacity: 0; transform: translate3d(47vw, 51vh, 0) rotate(24deg) scale(.58); }
+  39% { opacity: 1; transform: translate3d(24vw, 23vh, 0) rotate(-12deg) scale(.9); }
+  54% { transform: translate3d(20vw, 9vh, 0) rotate(8deg) scale(.96); }
+  68% { opacity: 1; transform: translate3d(12vw, 7vh, 0) rotate(-7deg) scale(.92); }
+  81% { opacity: 0; transform: translate3d(5vw, 2vh, 0) rotate(0deg) scale(.9); }
+  100% { opacity: 0; transform: translate3d(5vw, 2vh, 0) rotate(0deg) scale(.9); }
+}
+
+@keyframes halloween-flying { 0%, 39% { opacity: 1; } 46%, 100% { opacity: 0; } }
+@keyframes halloween-front { 0%, 39% { opacity: 0; } 46%, 53% { opacity: 1; } 56%, 61% { opacity: 0; } 65%, 79% { opacity: 1; } 84%, 100% { opacity: 0; } }
+@keyframes halloween-closed { 0%, 53% { opacity: 0; } 56%, 61% { opacity: 1; } 65%, 100% { opacity: 0; } }
+
+@keyframes halloween-final-reveal {
+  0%, 79% { opacity: 0; transform: translate3d(0, 0, 0) scale(.9); }
+  85% { opacity: 1; transform: translate3d(0, 0, 0) scale(1.05); }
+  91% { opacity: 1; transform: translate3d(0, 0, 0) scale(.98); }
+  96%, 100% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halloween-ghost { display: none; }
+  .halloween-final { animation: none; opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+.carousel-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.carousel-scroll::-webkit-scrollbar {
+  display: none;
+}

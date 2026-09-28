@@ -1,0 +1,10 @@
+{
+  "description": "Engage users with a dynamic home interface showcasing Halloween missions, allowing seamless navigation to mission lists and title details while preserving original design.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
